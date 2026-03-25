@@ -1,0 +1,19 @@
+# Internet Simulator Demo Image
+
+This is a placeholder "image" file for testing file transfer functionality.
+
+In a real scenario, this would be binary image data (PNG, JPEG, etc.).
+
+For the demo purposes, this text file simulates an image file that can be transferred between nodes.
+
+The file transfer system handles:
+- Binary data transmission
+- Chunking and reassembly
+- Error detection and correction
+- TCP reliability features
+
+File size: ~500 bytes (simulated small image)
+Format: PNG (simulated)
+Content: Demo data for network testing
+
+This demonstrates that the simulator can handle any type of file content, not just text.

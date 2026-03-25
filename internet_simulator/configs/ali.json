@@ -1,0 +1,8 @@
+{
+  "name": "Ali",
+  "ip": "192.168.1.2",
+  "role": "client",
+  "port": 5002,
+  "files": ["image.png", "notes.txt"],
+  "default_gateway": "192.168.1.1"
+}

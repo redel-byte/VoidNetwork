@@ -1,0 +1,14 @@
+Hello! This is a sample text file for the Internet Simulator demo.
+
+This file contains some text that can be transferred between different nodes in the simulated network.
+
+The Internet Simulator demonstrates:
+- TCP 3-way handshake
+- Packet fragmentation and reassembly
+- ARP resolution
+- Routing through intermediate nodes
+- File transfer with reliability
+
+This notes.txt file will be transferred from Ali to Bella to test the file transfer functionality.
+
+End of demo file.
