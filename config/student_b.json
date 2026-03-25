@@ -1,0 +1,7 @@
+{
+  "name": "Sara",
+  "ip": "192.168.1.3",
+  "role": "server",
+  "port": 5002,
+  "files": []
+}

@@ -1,0 +1,11 @@
+{
+  "dns": {
+    "student-b.local": "192.168.1.3",
+    "student-a.local": "192.168.1.2"
+  },
+  "peers": {
+    "192.168.1.2": {"name": "Ali", "role": "client", "port": 5001, "next_hop": "10.0.0.1"},
+    "192.168.1.3": {"name": "Sara", "role": "server", "port": 5002, "next_hop": "10.0.0.1"},
+    "10.0.0.1": {"name": "R1", "role": "router", "port": 5000}
+  }
+}
