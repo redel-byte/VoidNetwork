@@ -1,0 +1,7 @@
+{
+  "name": "Ali",
+  "ip": "192.168.1.2",
+  "role": "client",
+  "port": 5001,
+  "files": ["examples/class_photo.txt", "examples/notes.txt"]
+}

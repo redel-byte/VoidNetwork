@@ -1,0 +1,5 @@
+OSI Layers Notes:
+- L2 ARP
+- L3 IP routing
+- L4 TCP/UDP
+- L7 HTTP/DNS
