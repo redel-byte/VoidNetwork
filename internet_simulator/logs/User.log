@@ -1,0 +1,77 @@
+2026-03-29 19:59:30,495 - User - INFO - Default gateway set to 192.168.1.1
+2026-03-29 19:59:30,496 - User - INFO - Node User (192.168.1.6:5000) initialized
+2026-03-29 19:59:30,496 - User - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 19:59:30,497 - User - INFO - Client User initialized with files: ['image.png', 'notes.txt']
+2026-03-29 19:59:32,531 - User - ERROR - File test_file.txt not in allowed files list
+2026-03-29 19:59:35,532 - User - ERROR - File test_file.txt not in allowed files list
+2026-03-29 20:00:07,988 - User - INFO - Default gateway set to 192.168.1.1
+2026-03-29 20:00:07,988 - User - INFO - Node User (192.168.1.6:5000) initialized
+2026-03-29 20:00:07,988 - User - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 20:00:07,989 - User - INFO - Client User initialized with files: ['test_file.txt', 'image.png', 'notes.txt']
+2026-03-29 20:00:10,015 - User - INFO - Sending file test_file.txt (47 bytes) to 192.168.2.2 via UDP
+2026-03-29 20:00:10,015 - User - INFO - [ARP] Sending request: Who has 192.168.2.2?
+2026-03-29 20:00:10,028 - User - INFO - [PACKET] ← 192.168.2.2 ← 192.168.1.6 (arp)
+2026-03-29 20:00:10,029 - User - INFO - [ARP] Added entry: 192.168.2.2 -> mac-192-168-2-2
+2026-03-29 20:00:10,029 - User - INFO - [ARP] Received reply: 192.168.2.2 -> mac-192-168-2-2
+2026-03-29 20:00:10,560 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (udp) - via 192.168.1.1
+2026-03-29 20:00:10,560 - User - INFO - [UDP] Sent 29 bytes to 192.168.2.2:5000
+2026-03-29 20:00:10,573 - User - INFO - [PACKET] ← 192.168.1.1 ← 255.255.255.255 (arp)
+2026-03-29 20:00:10,583 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (udp) - via 192.168.1.1
+2026-03-29 20:00:10,583 - User - INFO - [UDP] Sent 57 bytes to 192.168.2.2:5000
+2026-03-29 20:00:10,583 - User - INFO - Sent UDP chunk 1/1 (47 bytes)
+2026-03-29 20:00:10,604 - User - INFO - File test_file.txt sent via UDP (some chunks may be lost)
+2026-03-29 20:00:13,605 - User - INFO - Sending file test_file.txt (47 bytes) to 192.168.2.2 via TCP
+2026-03-29 20:00:13,606 - User - INFO - [TCP] SYN sent to 192.168.2.2:5000 (seq=269660062)
+2026-03-29 20:00:13,699 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:14,701 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:14,720 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:14,769 - User - INFO - [PACKET] ← 192.168.2.2 ← 255.255.255.255 (arp)
+2026-03-29 20:00:14,770 - User - INFO - [ARP] Sent reply directly to 192.168.2.2 at 127.0.0.1:5004
+2026-03-29 20:00:14,771 - User - INFO - [ARP] Received request for 192.168.1.6, sending reply
+2026-03-29 20:00:15,721 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:15,758 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:16,759 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:16,825 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:17,827 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:17,917 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:18,919 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:18,966 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:19,967 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:20,022 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:21,024 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:21,069 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:22,070 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:22,156 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:23,158 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:23,205 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:23,739 - User - ERROR - [TCP] Connection timeout
+2026-03-29 20:00:24,207 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:24,269 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:25,271 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:25,360 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:26,361 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:26,375 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:27,376 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:27,472 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:28,474 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:28,572 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:29,574 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:29,586 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:30,588 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:30,683 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:31,685 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:31,707 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:32,709 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:32,788 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:33,790 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:33,881 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:33,883 - User - ERROR - [TCP] Connection timeout
+2026-03-29 20:00:33,884 - User - ERROR - Failed to send chunk 0
+2026-03-29 20:00:34,882 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:34,978 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:35,980 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:36,006 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:37,007 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:37,043 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1
+2026-03-29 20:00:38,044 - User - WARNING - [TCP] Retransmitting SYN
+2026-03-29 20:00:38,087 - User - INFO - [PACKET] → 192.168.1.6 → 192.168.2.2 (tcp) - via 192.168.1.1

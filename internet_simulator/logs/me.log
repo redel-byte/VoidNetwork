@@ -1,0 +1,211 @@
+2026-03-29 16:47:40,673 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:47:40,674 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:47:40,674 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:47:40,674 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 16:47:41,679 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:47:41,680 - me - INFO - [PACKET] ← 192.168.1.2 ← 192.168.1.6 (arp)
+2026-03-29 16:47:41,681 - me - INFO - [ARP] Added entry: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:47:41,681 - me - INFO - [ARP] Received reply: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:47:42,181 - me - INFO - Sending message to 192.168.1.2 via UDP: Hello from User to Ali!
+2026-03-29 16:47:42,262 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:47:42,263 - me - INFO - [UDP] Sent 31 bytes to 192.168.1.2:5000
+2026-03-29 16:47:42,263 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:48:05,575 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:48:05,575 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:48:05,576 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:48:05,576 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 16:48:06,580 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:48:06,582 - me - INFO - [PACKET] ← 192.168.1.2 ← 192.168.1.6 (arp)
+2026-03-29 16:48:06,583 - me - INFO - [ARP] Added entry: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:48:06,583 - me - INFO - [ARP] Received reply: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:48:07,082 - me - INFO - Sending message to 192.168.1.2 via UDP: Hello from User to Ali!
+2026-03-29 16:48:07,182 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:48:07,183 - me - INFO - [UDP] Sent 31 bytes to 192.168.1.2:5000
+2026-03-29 16:48:07,183 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:48:45,319 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:48:45,320 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:48:45,320 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:48:45,320 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 16:48:57,894 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:48:57,894 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:48:57,894 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:48:57,894 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 16:49:05,866 - me - INFO - Sending message to 192.168.1.2 via ALI!" UDP: "Hello
+2026-03-29 16:49:05,867 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:49:06,368 - me - ERROR - ARP resolution failed for 192.168.1.2
+2026-03-29 16:49:06,368 - me - INFO - [UDP] Sent 14 bytes to 192.168.1.2:5000
+2026-03-29 16:49:06,368 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:49:07,870 - me - WARNING - [ARP] Request timeout for 192.168.1.2
+2026-03-29 16:50:29,491 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:50:29,492 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:50:29,492 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:50:29,493 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 16:50:30,496 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:50:30,498 - me - INFO - [PACKET] ← 192.168.1.2 ← 192.168.1.6 (arp)
+2026-03-29 16:50:30,499 - me - INFO - [ARP] Added entry: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:50:30,499 - me - INFO - [ARP] Received reply: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:50:31,077 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:50:33,117 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:50:34,177 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:50:35,192 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:50:56,863 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:50:56,864 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:50:56,865 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:50:56,865 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 16:50:57,942 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:50:57,943 - me - INFO - [PACKET] ← 192.168.1.2 ← 192.168.1.6 (arp)
+2026-03-29 16:50:57,944 - me - INFO - [ARP] Added entry: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:50:57,944 - me - INFO - [ARP] Received reply: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:50:58,489 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:51:00,563 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:51:01,614 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:51:02,699 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:52:49,738 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:52:49,739 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:52:49,739 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:52:49,739 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 16:52:50,743 - me - INFO - Sending message to 192.168.1.2 via UDP: Hello Ali!
+2026-03-29 16:52:50,743 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:52:50,745 - me - INFO - [PACKET] ← 192.168.1.2 ← 192.168.1.6 (arp)
+2026-03-29 16:52:50,745 - me - INFO - [ARP] Added entry: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:52:50,746 - me - INFO - [ARP] Received reply: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:52:51,262 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:52:51,263 - me - INFO - [UDP] Sent 18 bytes to 192.168.1.2:5000
+2026-03-29 16:52:51,263 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:52:53,265 - me - INFO - Sending message to 192.168.1.2 via UDP: How are you?
+2026-03-29 16:52:53,351 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:52:53,351 - me - INFO - [UDP] Sent 20 bytes to 192.168.1.2:5000
+2026-03-29 16:52:53,351 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:52:55,355 - me - INFO - Sending message to 192.168.1.2 via UDP: This is working!
+2026-03-29 16:52:55,370 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:52:55,371 - me - INFO - [UDP] Sent 24 bytes to 192.168.1.2:5000
+2026-03-29 16:52:55,373 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:52:57,376 - me - INFO - Sending message to 192.168.1.2 via UDP: Final test message
+2026-03-29 16:52:57,411 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:52:57,412 - me - INFO - [UDP] Sent 26 bytes to 192.168.1.2:5000
+2026-03-29 16:52:57,413 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:52:59,421 - me - INFO - Sending message to 192.168.1.2 via UDP: FINAL TEST MESSAGE
+2026-03-29 16:52:59,506 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:52:59,506 - me - INFO - [UDP] Sent 26 bytes to 192.168.1.2:5000
+2026-03-29 16:52:59,509 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:53:23,368 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:53:23,369 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:53:23,369 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:53:23,369 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 16:53:24,374 - me - INFO - Sending message to 192.168.1.2 via UDP: Hello Ali!
+2026-03-29 16:53:24,374 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:53:24,376 - me - INFO - [PACKET] ← 192.168.1.2 ← 192.168.1.6 (arp)
+2026-03-29 16:53:24,376 - me - INFO - [ARP] Added entry: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:53:24,377 - me - INFO - [ARP] Received reply: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:53:24,888 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:53:24,889 - me - INFO - [UDP] Sent 18 bytes to 192.168.1.2:5000
+2026-03-29 16:53:24,890 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:53:26,892 - me - INFO - Sending message to 192.168.1.2 via UDP: How are you?
+2026-03-29 16:53:26,910 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:53:26,911 - me - INFO - [UDP] Sent 20 bytes to 192.168.1.2:5000
+2026-03-29 16:53:26,915 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:53:28,919 - me - INFO - Sending message to 192.168.1.2 via UDP: This is working!
+2026-03-29 16:53:28,937 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:53:28,939 - me - INFO - [UDP] Sent 24 bytes to 192.168.1.2:5000
+2026-03-29 16:53:28,940 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:53:30,941 - me - INFO - Sending message to 192.168.1.2 via UDP: Final test message
+2026-03-29 16:53:30,961 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:53:30,961 - me - INFO - [UDP] Sent 26 bytes to 192.168.1.2:5000
+2026-03-29 16:53:30,962 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:53:32,963 - me - INFO - Sending message to 192.168.1.2 via UDP: FINAL TEST MESSAGE
+2026-03-29 16:53:33,024 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:53:33,025 - me - INFO - [UDP] Sent 26 bytes to 192.168.1.2:5000
+2026-03-29 16:53:33,026 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:54:17,462 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:54:17,462 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:54:17,462 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:54:17,463 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 16:54:18,466 - me - INFO - Sending message to 192.168.1.2 via UDP: Hello Ali!
+2026-03-29 16:54:18,466 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:54:18,467 - me - INFO - [PACKET] ← 192.168.1.2 ← 192.168.1.6 (arp)
+2026-03-29 16:54:18,468 - me - INFO - [ARP] Added entry: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:54:18,468 - me - INFO - [ARP] Received reply: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:54:19,067 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:54:19,068 - me - INFO - [UDP] Sent 18 bytes to 192.168.1.2:5000
+2026-03-29 16:54:19,068 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:54:21,069 - me - INFO - Sending message to 192.168.1.2 via UDP: How are you?
+2026-03-29 16:54:21,146 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:54:21,147 - me - INFO - [UDP] Sent 20 bytes to 192.168.1.2:5000
+2026-03-29 16:54:21,147 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:54:23,178 - me - INFO - Sending message to 192.168.1.2 via UDP: This is working!
+2026-03-29 16:54:23,179 - me - WARNING - [UDP] Packet lost to 192.168.1.2:5000
+2026-03-29 16:54:23,179 - me - ERROR - [UDP] Failed to send message
+2026-03-29 16:54:25,183 - me - INFO - Sending message to 192.168.1.2 via UDP: Final test message
+2026-03-29 16:54:25,227 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:54:25,233 - me - INFO - [UDP] Sent 26 bytes to 192.168.1.2:5000
+2026-03-29 16:54:25,233 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:54:27,235 - me - INFO - Sending message to 192.168.1.2 via UDP: FINAL TEST MESSAGE
+2026-03-29 16:54:27,296 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:54:27,297 - me - INFO - [UDP] Sent 26 bytes to 192.168.1.2:5000
+2026-03-29 16:54:27,297 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:54:42,971 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:54:42,971 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:54:42,971 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:54:42,971 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 16:54:44,975 - me - INFO - Sending message to 192.168.1.2 via UDP: Hello Ali from User!
+2026-03-29 16:54:44,976 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:54:44,977 - me - INFO - [PACKET] ← 192.168.1.2 ← 192.168.1.6 (arp)
+2026-03-29 16:54:44,977 - me - INFO - [ARP] Added entry: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:54:44,978 - me - INFO - [ARP] Received reply: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 16:54:45,568 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 16:54:45,569 - me - INFO - [UDP] Sent 28 bytes to 192.168.1.2:5000
+2026-03-29 16:54:45,569 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:54:47,571 - me - INFO - [PACKET] ← 192.168.1.2 ← 255.255.255.255 (arp)
+2026-03-29 16:54:47,572 - me - INFO - [ARP] Sent reply directly to 192.168.1.2 at 127.0.0.1:5003
+2026-03-29 16:54:47,572 - me - INFO - [ARP] Received request for 192.168.1.6, sending reply
+2026-03-29 16:54:48,148 - me - INFO - [PACKET] ← 192.168.1.2 ← 192.168.1.6 (udp)
+2026-03-29 16:54:48,149 - me - INFO - [UDP] Received 28 bytes from 192.168.1.2 to port 5000
+2026-03-29 16:54:48,149 - me - INFO - [UDP] Message from 192.168.1.2: ello User from Ali!
+2026-03-29 16:55:21,700 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:55:21,701 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:55:21,701 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:55:21,701 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 16:56:01,802 - me - INFO - Sending message to 192.168.1.2 via ALI!" UDP: "Hello
+2026-03-29 16:56:01,802 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:56:02,304 - me - ERROR - ARP resolution failed for 192.168.1.2
+2026-03-29 16:56:02,304 - me - INFO - [UDP] Sent 14 bytes to 192.168.1.2:5000
+2026-03-29 16:56:02,304 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:56:03,808 - me - WARNING - [ARP] Request timeout for 192.168.1.2
+2026-03-29 16:56:07,266 - me - INFO - Sending message to 192.168.1.2 via ALI!" UDP: "Hello
+2026-03-29 16:56:07,267 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:56:07,768 - me - ERROR - ARP resolution failed for 192.168.1.2
+2026-03-29 16:56:07,768 - me - INFO - [UDP] Sent 14 bytes to 192.168.1.2:5000
+2026-03-29 16:56:07,768 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:56:09,282 - me - WARNING - [ARP] Request timeout for 192.168.1.2
+2026-03-29 16:56:12,590 - me - INFO - Sending message to 192.168.1.2 via ALI!" UDP: "Hello
+2026-03-29 16:56:12,590 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 16:56:13,091 - me - ERROR - ARP resolution failed for 192.168.1.2
+2026-03-29 16:56:13,091 - me - INFO - [UDP] Sent 14 bytes to 192.168.1.2:5000
+2026-03-29 16:56:13,091 - me - INFO - [UDP] Message sent successfully
+2026-03-29 16:56:14,591 - me - WARNING - [ARP] Request timeout for 192.168.1.2
+2026-03-29 16:56:38,154 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:56:38,154 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 16:56:38,154 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 16:56:38,154 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 17:10:13,996 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 17:10:13,996 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 17:10:13,996 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 17:10:13,996 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']
+2026-03-29 17:10:52,540 - me - INFO - Sending message to 192.168.1.2 via ALI!" UDP: "Hello
+2026-03-29 17:10:52,540 - me - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 17:10:52,547 - me - INFO - [PACKET] ← 192.168.1.2 ← 192.168.1.6 (arp)
+2026-03-29 17:10:52,547 - me - INFO - [ARP] Added entry: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 17:10:52,547 - me - INFO - [ARP] Received reply: 192.168.1.2 -> mac-192-168-1-2
+2026-03-29 17:10:53,081 - me - INFO - [PACKET] → 192.168.1.6 → 192.168.1.2 (udp) - via 192.168.1.2
+2026-03-29 17:10:53,081 - me - INFO - [UDP] Sent 14 bytes to 192.168.1.2:5000
+2026-03-29 17:10:53,082 - me - INFO - [UDP] Message sent successfully
+2026-03-29 17:11:12,766 - me - INFO - [PACKET] ← 192.168.1.2 ← 255.255.255.255 (arp)
+2026-03-29 17:11:12,767 - me - INFO - [ARP] Sent reply directly to 192.168.1.2 at 127.0.0.1:5003
+2026-03-29 17:11:12,767 - me - INFO - [ARP] Received request for 192.168.1.6, sending reply
+2026-03-29 17:11:13,287 - me - INFO - [PACKET] ← 192.168.1.2 ← 192.168.1.6 (udp)
+2026-03-29 17:11:13,288 - me - INFO - [UDP] Received 14 bytes from 192.168.1.2 to port 5000
+2026-03-29 17:11:13,288 - me - INFO - [UDP] Message from 192.168.1.2: Hello
+2026-03-29 19:27:28,574 - me - INFO - Default gateway set to 192.168.1.1
+2026-03-29 19:27:28,576 - me - INFO - Node me (192.168.1.6:5000) initialized
+2026-03-29 19:27:28,576 - me - INFO - [ARP] Added entry: 192.168.1.6 -> mac-192-168-1-6
+2026-03-29 19:27:28,576 - me - INFO - Client me initialized with files: ['image.png', 'notes.txt']

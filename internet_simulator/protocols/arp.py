@@ -104,19 +104,30 @@ class ARPTable:
         arp_data = f"ARP_REPLY|{self.node.ip}|{mac}".encode()
         packet = self.node.create_packet(target_ip, 'arp', arp_data)
         
-        # Send directly to target
-        self.node.send_packet(packet, target_ip)
+        # Send directly to target using the global registry
+        from main import resolve_ip
+        target_address = resolve_ip(target_ip)
+        if target_address:
+            host, port = target_address
+            self.node.socket.sendto(packet.to_bytes(), (host, port))
+            self.node.logger.info(f"[ARP] Sent reply directly to {target_ip} at {host}:{port}")
+        else:
+            # Fallback: try to send packet normally
+            self.node.send_packet(packet, target_ip)
     
     def _broadcast_packet(self, packet):
         """Broadcast packet to all known nodes."""
-        # In a real network, this would be actual broadcast
-        # For simulation, we send to all registered nodes
-        if hasattr(self.node, '_broadcast_to_all'):
-            self.node._broadcast_to_all(packet)
-        else:
-            # Fallback: try to send to default gateway
-            if self.node.default_gateway:
-                self.node.send_packet(packet, self.node.default_gateway)
+        # Send to all registered nodes using global registry
+        from main import get_all_registered_nodes
+        nodes = get_all_registered_nodes()
+        
+        for ip, (host, port) in nodes.items():
+            if ip != self.node.ip:  # Don't send to self
+                try:
+                    self.node.socket.sendto(packet.to_bytes(), (host, port))
+                    self.node.logger.debug(f"[ARP] Broadcast sent to {ip}:{port}")
+                except Exception as e:
+                    self.node.logger.error(f"[ARP] Failed to broadcast to {ip}: {e}")
     
     def _remove_pending_request(self, target_ip):
         """Remove pending request after timeout."""

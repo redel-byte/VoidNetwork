@@ -7,15 +7,21 @@ class RoutingTable:
 
     def get_next_hop(self, dest_ip):
         """Find the best match route."""
-        # Simple longest prefix match.
-        # For now, just return gateway if dest matches a route.
-        # If no route, return None.
+        # First check for exact match (direct connection)
         for dest, netmask, gateway in self.routes:
-            # Simplified: if dest is '0.0.0.0' (default), match all.
-            if dest == '0.0.0.0':
-                return gateway
-            # In real simulation, we'd check network prefix.
-            # For simplicity, exact match or default.
             if dest == dest_ip:
+                return dest_ip  # Direct connection
+        
+        # Check if this is the same network (simplified - assume /24)
+        dest_network = '.'.join(dest_ip.split('.')[:-1]) + '.0'
+        for dest, netmask, gateway in self.routes:
+            if dest.endswith('.0') and dest_ip.startswith(dest[:-1]):
+                return dest_ip  # Same network, direct connection
+        
+        # Then check for default route
+        for dest, netmask, gateway in self.routes:
+            if dest == '0.0.0.0':  # Default route
                 return gateway
-        return None
+        
+        # If no route found, try direct connection as fallback
+        return dest_ip

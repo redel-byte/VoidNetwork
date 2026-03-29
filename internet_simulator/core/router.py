@@ -16,18 +16,22 @@ class Router(Node):
         self.logger.info(f"Router {self.name} initialized and ready to forward packets")
 
     def _setup_router_routes(self):
-        """Setup routing table for router."""
-        # Add direct connections to all possible clients
-        # In a real scenario, this would be configured dynamically
-        client_networks = [
-            ('192.168.1.2', '255.255.255.255', '192.168.1.2'),  # Ali
-            ('192.168.1.3', '255.255.255.255', '192.168.1.3'),  # Bella
+        """Setup routing table for router with multiple networks."""
+        # Add network routes for different subnets
+        network_routes = [
+            # Network 1 (192.168.1.0/24) - directly connected
+            ('192.168.1.0', '255.255.255.0', '192.168.1.0'),
+            # Network 2 (192.168.2.0/24) - directly connected  
+            ('192.168.2.0', '255.255.255.0', '192.168.2.0'),
+            # Specific host routes
+            ('192.168.1.6', '255.255.255.255', '192.168.1.6'),  # User
+            ('192.168.2.2', '255.255.255.255', '192.168.2.2'),  # Ali
         ]
         
-        for dest, mask, gateway in client_networks:
+        for dest, mask, gateway in network_routes:
             self.routing_table.add_route(dest, mask, gateway)
         
-        self.logger.info("Router routing table configured")
+        self.logger.info("Router routing table configured for multiple networks")
 
     def forward_packet(self, packet):
         """Forward packet with routing logic."""

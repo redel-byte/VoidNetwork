@@ -1,0 +1,22 @@
+2026-03-29 15:43:14,535 - Bella - INFO - Default gateway set to 192.168.1.1
+2026-03-29 15:43:14,535 - Bella - INFO - Node Bella (192.168.1.3:5003) initialized
+2026-03-29 15:43:14,535 - Bella - INFO - [ARP] Added entry: 192.168.1.3 -> mac-192-168-1-3
+2026-03-29 15:43:14,535 - Bella - INFO - Client Bella initialized with files: ['document.pdf', 'photo.jpg']
+2026-03-29 15:54:19,837 - Bella - INFO - Sending message to 192.168.1.2 via TCP: "hellp"
+2026-03-29 15:54:19,838 - Bella - INFO - [TCP] SYN sent to 192.168.1.2:5000 (seq=3278057340)
+2026-03-29 15:54:19,838 - Bella - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 15:54:20,339 - Bella - ERROR - ARP resolution failed for 192.168.1.2
+2026-03-29 15:54:21,340 - Bella - WARNING - [TCP] Retransmitting SYN
+2026-03-29 15:54:21,842 - Bella - ERROR - ARP resolution failed for 192.168.1.2
+2026-03-29 15:54:21,851 - Bella - WARNING - [ARP] Request timeout for 192.168.1.2
+2026-03-29 15:54:22,843 - Bella - WARNING - [TCP] Retransmitting SYN
+2026-03-29 15:54:22,843 - Bella - INFO - [ARP] Sending request: Who has 192.168.1.2?
+2026-03-29 15:54:23,345 - Bella - ERROR - ARP resolution failed for 192.168.1.2
+2026-03-29 15:54:52,134 - Bella - INFO - Default gateway set to 192.168.1.1
+2026-03-29 15:54:52,134 - Bella - INFO - Node Bella (192.168.1.3:5003) initialized
+2026-03-29 15:54:52,134 - Bella - INFO - [ARP] Added entry: 192.168.1.3 -> mac-192-168-1-3
+2026-03-29 15:54:52,134 - Bella - INFO - Client Bella initialized with files: ['document.pdf', 'photo.jpg']
+2026-03-29 16:01:38,102 - Bella - INFO - Default gateway set to 192.168.1.1
+2026-03-29 16:01:38,103 - Bella - INFO - Node Bella (192.168.1.3:5002) initialized
+2026-03-29 16:01:38,103 - Bella - INFO - [ARP] Added entry: 192.168.1.3 -> mac-192-168-1-3
+2026-03-29 16:01:38,103 - Bella - INFO - Client Bella initialized with files: ['document.pdf', 'photo.jpg']

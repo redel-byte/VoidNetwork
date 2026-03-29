@@ -1,8 +1,0 @@
-{
-  "name": "Bella",
-  "ip": "192.168.1.3",
-  "role": "client",
-  "port": 5003,
-  "files": ["document.pdf", "photo.jpg"],
-  "default_gateway": "192.168.1.1"
-}

@@ -1,0 +1,8 @@
+{
+  "name": "Rihaba",
+  "ip": "192.168.1.3",
+  "role": "client",
+  "port": 5002,
+  "files": ["document.pdf", "Rihaba.png"],
+  "default_gateway": "192.168.1.1"
+}

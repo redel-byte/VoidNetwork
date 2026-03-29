@@ -14,6 +14,8 @@ class Packet:
         self.seq = seq            # sequence number for reassembly
         self.frag_offset = frag_offset
         self.more_frags = more_frags
+        self.src_port = 0  # Default source port
+        self.dst_port = 0  # Default destination port
         self.checksum = self.calc_checksum()
 
     def calc_checksum(self):
@@ -38,7 +40,7 @@ class Packet:
             str(int(self.more_frags)),
             self.checksum
         ]
-        header = '|'.join(parts).encode() + b'|'
+        header = '|'.join(parts).encode() + b'||'
         return header + self.payload
 
     @classmethod

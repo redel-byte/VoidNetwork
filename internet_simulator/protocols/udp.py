@@ -15,12 +15,16 @@ class UDPSocket:
     
     def sendto(self, data, dst_ip, dst_port):
         """Send data to destination using UDP."""
-        # Create UDP packet with port information
-        udp_data = f"{dst_port}|".encode() + data
+        # Create UDP packet with port information - fix the format
+        if isinstance(data, bytes):
+            data_str = data.decode()
+        else:
+            data_str = data
+        udp_data = f"{dst_port}|{data_str}".encode()
         packet = self.node.create_packet(dst_ip, 'udp', udp_data)
         
-        # Simulate UDP packet loss (higher than TCP)
-        if random.random() < 0.1:  # 10% loss for UDP
+        # Simulate UDP packet loss (reduced for testing)
+        if random.random() < 0.01:  # 1% loss instead of 10%
             self.node.logger.warning(f"[UDP] Packet lost to {dst_ip}:{dst_port}")
             return False
         

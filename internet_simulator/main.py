@@ -6,26 +6,35 @@ from utils.config_loader import load_config
 from core.client import Client
 from core.router import Router
 from cli import NodeCLI
+from shared_registry import register_shared_node, get_shared_node_address, get_all_shared_nodes, unregister_shared_node
 
-# Global registry: IP -> (host, port)
+# Global registry: IP -> (host, port) - for backward compatibility
 REGISTRY = {}
 REGISTRY_LOCK = threading.Lock()
 
 def register_node(ip, host, port):
-    """Register a node in the global registry."""
+    """Register a node in both local and shared registry."""
+    # Local registry (for backward compatibility)
     with REGISTRY_LOCK:
         REGISTRY[ip] = (host, port)
-        print(f"Registered node {ip} at {host}:{port}")
+    
+    # Shared registry (for multi-terminal support)
+    register_shared_node(ip, host, port)
 
 def resolve_ip(ip):
-    """Resolve IP to (host, port) from registry."""
+    """Resolve IP to (host, port) from shared registry."""
+    # Try shared registry first
+    address = get_shared_node_address(ip)
+    if address:
+        return address
+    
+    # Fallback to local registry
     with REGISTRY_LOCK:
         return REGISTRY.get(ip)
 
 def get_all_registered_nodes():
-    """Get all registered nodes."""
-    with REGISTRY_LOCK:
-        return dict(REGISTRY)
+    """Get all registered nodes from shared registry."""
+    return get_all_shared_nodes()
 
 # Enhanced Node method for broadcasting
 def _broadcast_to_all(self, packet):
@@ -98,11 +107,12 @@ def main():
             node.running = False
             print(f"Shutting down {node.name}...")
             
-            # Clean up registry
+            # Clean up registries
             with REGISTRY_LOCK:
                 if config['ip'] in REGISTRY:
                     del REGISTRY[config['ip']]
             
+            unregister_shared_node(config['ip'])
             print("Shutdown complete.")
 
     except FileNotFoundError as e:

@@ -20,7 +20,17 @@ class Node:
         self.routing_table = RoutingTable()
         self.arp_table = ARPTable(self)
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)  # Use UDP for simplicity
-        self.socket.bind(('0.0.0.0', self.port))
+        # Try to bind, handle port conflicts gracefully
+        try:
+            self.socket.bind(('0.0.0.0', self.port))
+        except OSError as e:
+            if hasattr(e, 'winerr') and e.winerr == 10048:  # Port already in use
+                self.logger.warning(f"Port {self.port} already in use, trying alternative port")
+                self.port += 1  # Try next port
+                self.socket.bind(('0.0.0.0', self.port))
+                self.logger.info(f"Successfully bound to alternative port {self.port}")
+            else:
+                raise
         self.running = True
         self.receive_thread = threading.Thread(target=self.receive_loop, daemon=True)
         self.receive_thread.start()
@@ -45,6 +55,13 @@ class Node:
         """Setup initial routing table."""
         # Add direct routes (connected networks)
         self.routing_table.add_route('127.0.0.1', '255.255.255.255', '127.0.0.1')
+        
+        # Add direct route to self
+        self.routing_table.add_route(self.ip, '255.255.255.255', self.ip)
+        
+        # Add network route (assuming /24 network)
+        network = '.'.join(self.ip.split('.')[:-1]) + '.0'
+        self.routing_table.add_route(network, '255.255.255.0', network)
         
         # Add default gateway if configured
         if self.default_gateway:
@@ -108,17 +125,16 @@ class Node:
             self.logger.error(f"ARP resolution failed for {dest_ip}")
             return False
         
-        # Get next hop from routing table
         next_hop = self.routing_table.get_next_hop(dest_ip)
         if not next_hop:
             self.logger.error(f"No route to {dest_ip}")
             return False
         
-        # Resolve next hop to actual address
-        host, port = self.resolve_ip_to_address(next_hop)
-        if host is None:
+        address = self.resolve_ip_to_address(next_hop)
+        if address is None:
             self.logger.error(f"Cannot resolve {next_hop}")
             return False
+        host, port = address
         
         # Simulate network delay
         time.sleep(random.uniform(0.01, 0.1))
@@ -132,11 +148,14 @@ class Node:
             return False
 
     def resolve_ip_to_address(self, ip):
-        """In a real simulation, this would use ARP or a registry. For now, assume localhost with port mapping."""
-        # We'll keep a mapping of IP to (host, port) globally.
-        # For simplicity, we'll use a global dictionary that nodes register themselves.
-        # We'll implement a simple registry in main.
-        pass
+        """Resolve IP to (host, port) using global registry."""
+        from main import resolve_ip
+        result = resolve_ip(ip)
+        if result:
+            self.logger.debug(f"Resolved {ip} to {result}")
+        else:
+            self.logger.warning(f"Could not resolve {ip}")
+        return result
 
     def forward_packet(self, packet):
         """Forward packet based on routing table."""

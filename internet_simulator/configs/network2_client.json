@@ -1,8 +1,8 @@
 {
   "name": "Ali",
-  "ip": "192.168.1.2",
+  "ip": "192.168.2.2",
   "role": "client",
   "port": 5003,
   "files": ["Ali.png", "Alinotes.txt"],
-  "default_gateway": "192.168.1.1"
+  "default_gateway": "192.168.2.1"
 }

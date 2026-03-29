@@ -182,12 +182,13 @@ class TCPManager:
                 return
                 
             packet_type = payload_str.split('|')[0]
-            conn_key = f"{packet.src_ip}:{packet.src_port}"
+            # Use destination IP for connection key since we don't have proper ports
+            conn_key = f"{packet.src_ip}:{packet.dst_ip}"
             
             with self.lock:
                 if packet_type == "SYN":
                     # Create new connection for incoming SYN
-                    conn = TCPConnection(self.node.ip, self.node.port, packet.src_ip, packet.src_port, self.node)
+                    conn = TCPConnection(self.node.ip, self.node.port, packet.src_ip, 5000, self.node)
                     self.connections[conn_key] = conn
                     conn.handle_syn(packet)
                     
