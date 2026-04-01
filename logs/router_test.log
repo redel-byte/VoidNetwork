@@ -1,0 +1,2 @@
+15:01:29 [NODE] R1 online at 10.0.0.1:5000 role=router
+15:01:29 [ROUTER] Forwarding seq=1 to 192.168.1.3:5002

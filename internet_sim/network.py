@@ -101,7 +101,7 @@ class Node:
         resolve_arp(destination_ip, self.arp_table, self.log)
 
         destination = self.peers[destination_ip]
-        next_hop_ip = destination.get("next_hop", destination_ip)
+        next_hop_ip = self._resolve_next_hop(destination_ip)
         next_hop = self.peers[next_hop_ip]
 
         data = json.dumps(payload).encode("utf-8")
@@ -211,7 +211,7 @@ class Node:
         udp_socket: socket.socket | None = None,
     ) -> None:
         if self.identity.role == "router" and packet.destination_ip != self.identity.ip:
-            self._forward_packet(packet, transport)
+            self._forward_packet(packet, transport, tcp_conn=tcp_conn)
             return
 
         if packet.destination_ip != self.identity.ip:
@@ -283,9 +283,13 @@ class Node:
                 f"[HTTP] Response {msg['status']} from {msg['sender']} ({source_ip}): {msg['body']}"
             )
 
-    def _forward_packet(self, packet: Packet, transport: str) -> None:
-        destination = self.peers[packet.destination_ip]
-        next_hop_ip = destination.get("next_hop", packet.destination_ip)
+    def _forward_packet(
+        self,
+        packet: Packet,
+        transport: str,
+        tcp_conn: socket.socket | None = None,
+    ) -> None:
+        next_hop_ip = self._resolve_next_hop(packet.destination_ip)
         next_hop = self.peers[next_hop_ip]
         self.log.info(
             f"[ROUTER] Forwarding seq={packet.sequence_number} to {next_hop_ip}:{next_hop['port']}"
@@ -297,6 +301,20 @@ class Node:
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
                 sock.connect(("127.0.0.1", next_hop["port"]))
                 sock.sendall(packet.encode() + b"\n")
+                sock.settimeout(0.8)
+                try:
+                    ack_raw = sock.recv(4096)
+                except socket.timeout:
+                    return
+                if tcp_conn and ack_raw:
+                    tcp_conn.sendall(ack_raw)
+
+    def _resolve_next_hop(self, destination_ip: str) -> str:
+        destination = self.peers[destination_ip]
+        next_hop_ip = destination.get("next_hop", destination_ip)
+        if self.identity.role == "router" and next_hop_ip == self.identity.ip:
+            return destination_ip
+        return next_hop_ip
 
 
 def build_arg_parser() -> argparse.ArgumentParser:

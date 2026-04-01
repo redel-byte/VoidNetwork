@@ -1,0 +1,8 @@
+15:01:29 [NODE] Ali online at 192.168.1.2:5001 role=client
+15:01:29 [ARP] Who has 192.168.1.3? (simulated broadcast)
+15:01:29 [ARP] 192.168.1.3 is-at aa:bb:cc:dd:ee:ff
+15:01:29 [TCP] SYN ->
+15:01:29 [TCP] <- SYN-ACK
+15:01:29 [TCP] ACK ->
+15:01:29 [TCP] Sent seq=1 frag=1/1
+15:01:29 [TCP] ACK received for seq=1
