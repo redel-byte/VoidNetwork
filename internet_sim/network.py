@@ -16,6 +16,7 @@ from .protocols import (
     checksum_ok,
     emulate_delay,
     maybe_drop,
+    missing_fragments,
     resolve_arp,
     resolve_dns,
     tcp_handshake,
@@ -99,7 +100,8 @@ class Node:
         destination_ip = resolve_dns(target, self.dns_table, self.log)
         resolve_arp(destination_ip, self.arp_table, self.log)
 
-        next_hop_ip = self._resolve_next_hop(destination_ip)
+        destination = self.peers[destination_ip]
+        next_hop_ip = destination.get("next_hop", destination_ip)
         next_hop = self.peers[next_hop_ip]
 
         data = json.dumps(payload).encode("utf-8")
@@ -209,7 +211,7 @@ class Node:
         udp_socket: socket.socket | None = None,
     ) -> None:
         if self.identity.role == "router" and packet.destination_ip != self.identity.ip:
-            self._forward_packet(packet, transport, incoming_tcp_conn=tcp_conn)
+            self._forward_packet(packet, transport)
             return
 
         if packet.destination_ip != self.identity.ip:
@@ -281,13 +283,9 @@ class Node:
                 f"[HTTP] Response {msg['status']} from {msg['sender']} ({source_ip}): {msg['body']}"
             )
 
-    def _forward_packet(
-        self,
-        packet: Packet,
-        transport: str,
-        incoming_tcp_conn: socket.socket | None = None,
-    ) -> None:
-        next_hop_ip = self._resolve_next_hop(packet.destination_ip)
+    def _forward_packet(self, packet: Packet, transport: str) -> None:
+        destination = self.peers[packet.destination_ip]
+        next_hop_ip = destination.get("next_hop", packet.destination_ip)
         next_hop = self.peers[next_hop_ip]
         self.log.info(
             f"[ROUTER] Forwarding seq={packet.sequence_number} to {next_hop_ip}:{next_hop['port']}"
@@ -299,21 +297,6 @@ class Node:
             with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
                 sock.connect(("127.0.0.1", next_hop["port"]))
                 sock.sendall(packet.encode() + b"\n")
-                # Relay ACK back to original sender to support end-to-end TCP retries.
-                try:
-                    sock.settimeout(0.8)
-                    ack_raw = sock.recv(4096)
-                    if incoming_tcp_conn and ack_raw:
-                        incoming_tcp_conn.sendall(ack_raw)
-                except socket.timeout:
-                    self.log.info(f"[ROUTER] No ACK received for seq={packet.sequence_number}")
-
-    def _resolve_next_hop(self, destination_ip: str) -> str:
-        destination = self.peers[destination_ip]
-        next_hop_ip = destination.get("next_hop", destination_ip)
-        if next_hop_ip == self.identity.ip:
-            return destination_ip
-        return next_hop_ip
 
 
 def build_arg_parser() -> argparse.ArgumentParser:
