@@ -1,0 +1,1 @@
+This is a placeholder for an image payload in class. In a real demo, use an actual PNG/JPG file.
